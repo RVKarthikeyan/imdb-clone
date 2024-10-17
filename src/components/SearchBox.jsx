@@ -8,6 +8,7 @@ export default function SearchBox() {
     const handleSubmit = (e) =>{
         e.preventDefault()
         router.push(`/search/${search}`)
+        setSearch('')
     }
     const handleKeyPress = (e) =>{
         if(e.key === 'Enter'){
