@@ -1,17 +1,17 @@
-"use client"
+'use client';
 
-import { use } from 'express/lib/router';
-import React from 'react'
-import {useEffect} from 'react';
+import React, { useEffect } from 'react';
 
-export default function error({error, reset}) {
-    useEffect(()=>{
-        console.log(error);
-    },[error]);
+// Renamed function component to ErrorComponent (starting with a capital letter)
+export default function ErrorComponent({ error, reset }) {
+  useEffect(() => {
+    console.log(error);
+  }, [error]);
+
   return (
     <div className='text-center mt-10'>
-        <h1>Something went wrong. Please try again later.</h1>
-        <button className='hover:text-amber-600' onClick={()=>reset()}>Try Again</button>
+      <h1>Something went wrong. Please try again later.</h1>
+      <button className='hover:text-amber-600' onClick={() => reset()}>Try Again</button>
     </div>
-  )
+  );
 }
